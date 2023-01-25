@@ -16,6 +16,7 @@ const nextConfig = {
       'upcdn.io',
       'placeimh.com',
       'i.picsum.photos',
+      'static.platzi.com',
     ],
   },
 }
