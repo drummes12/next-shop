@@ -1,0 +1,49 @@
+@use 'vars';
+
+.ProductInfo {
+  background-color: vars.$white;
+  border-radius: 20px;
+  padding: 14px;
+  margin: 10px;
+}
+.ProductInfo p:nth-child(1) {
+  font-weight: bold;
+  font-size: vars.$md;
+  margin-top: 0;
+  margin-bottom: 4px;
+}
+.ProductInfo p:nth-child(2) {
+  color: vars.$very-light-pink;
+  font-size: vars.$md;
+  margin-top: 0;
+  margin-bottom: 36px;
+}
+.ProductInfo p:nth-child(3) {
+  color: vars.$very-light-pink;
+  font-size: vars.$sm;
+  margin-top: 0;
+  margin-bottom: 36px;
+}
+.primary-button {
+  border-radius: 8px;
+  border: none;
+  width: 100%;
+  cursor: pointer;
+  font-size: vars.$md;
+  font-weight: bold;
+  height: 50px;
+}
+.primary-button.add {
+  background-color: vars.$hospital-green;
+  color: vars.$white;
+}
+.primary-button.added {
+  background-color: vars.$white;
+  color: vars.$hospital-green;
+  border: 1px solid vars.$hospital-green;
+}
+.add-to-cart-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

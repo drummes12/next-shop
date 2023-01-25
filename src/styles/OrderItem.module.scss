@@ -1,0 +1,48 @@
+@use 'vars';
+
+.OrderItem {
+  position: relative;
+  background-color: vars.$white;
+  border-radius: 20px;
+  padding: 20px 24px;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 16px;
+  margin-bottom: 24px;
+  align-items: center;
+}
+.OrderItem figure {
+  margin: 0;
+}
+.OrderItem figure img {
+  margin-bottom: -4px;
+  width: 70px;
+  height: 70px;
+  border-radius: 20px;
+  object-fit: cover;
+  cursor: pointer;
+}
+.OrderItem p:nth-child(2) {
+  color: vars.$very-light-pink;
+}
+.OrderItem p:nth-child(3) {
+  font-size: vars.$md;
+  font-weight: bold;
+}
+.OrderItem > img {
+  position: absolute;
+  border-top: 1px solid vars.$very-light-pink;
+  border-left: 1px solid vars.$very-light-pink;
+  left: 0;
+  top: 0;
+  border-radius: 20px 0 0 0;
+  padding: 4px;
+  cursor: pointer;
+  // transition-duration: 0.3s;
+}
+
+.OrderItem > img:hover {
+  border-top: 3px solid vars.$very-light-pink;
+  border-left: 3px solid vars.$very-light-pink;
+  filter: brightness(0%);
+}

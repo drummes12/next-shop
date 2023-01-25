@@ -1,0 +1,37 @@
+@use 'vars';
+
+.MenuMobile {
+  position: absolute;
+  top: 61px;
+  right: 0;
+  width: calc(100vw - 48px);
+  height: 100vh;
+  padding: 24px;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+}
+.MenuMobile a {
+  text-decoration: none;
+  color: vars.$black;
+  font-weight: bold;
+  cursor: pointer;
+}
+.MenuMobile ul {
+  padding: 0;
+  margin: 24px 0 0;
+  list-style: none;
+}
+.MenuMobile ul:nth-child(1) {
+  border-bottom: 1px solid vars.$very-light-pink;
+}
+.MenuMobile ul li {
+  margin-bottom: 24px;
+}
+.email {
+  font-size: vars.$sm;
+  font-weight: 300 !important;
+}
+.sign-out {
+  font-size: vars.$sm;
+  color: vars.$hospital-green !important;
+}

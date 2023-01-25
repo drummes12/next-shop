@@ -1,0 +1,89 @@
+@use 'vars';
+
+.MyOrder {
+  width: 360px;
+  padding: 24px;
+  box-sizing: border-box;
+  position: absolute;
+  right: 0;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  top: 60px;
+  height: calc(100vh - 60px);
+  border-radius: 6px;
+  border: 1px solid vars.$very-light-pink;
+}
+.title-container {
+  display: flex;
+  align-items: center;
+  height: 50px;
+  margin-bottom: 24px;
+}
+.title-container img {
+  transform: rotate(180deg);
+  margin-right: 14px;
+  cursor: pointer;
+}
+.title-container p {
+  margin: auto 0;
+}
+.title {
+  font-size: vars.$lg;
+  font-weight: bold;
+}
+.my-order-items {
+  max-height: calc(100vh - 334px);
+  overflow-y: auto;
+  margin-bottom: 24px;
+}
+.my-order-items::-webkit-scrollbar {
+	width: 8px;
+	border-radius: 4px;
+}
+.my-order-items::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 4px;
+}
+.my-order-items::-webkit-scrollbar-thumb:hover {
+  background: #b3b3b3;
+  box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+.order {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 16px;
+  align-items: center;
+  background-color: vars.$text-input-field;
+  margin-bottom: 24px;
+  border-radius: 8px;
+  padding: 0 24px;
+}
+.order p:nth-child(1) {
+  display: flex;
+  flex-direction: column;
+}
+.order p span:nth-child(1) {
+  font-size: vars.$md;
+  font-weight: bold;
+}
+.order p:nth-child(2) {
+  text-align: end;
+  font-weight: bold;
+}
+
+.primary-button {
+  background-color: vars.$hospital-green;
+  border-radius: 8px;
+  border: none;
+  color: vars.$white;
+  width: 100%;
+  cursor: pointer;
+  font-size: vars.$md;
+  font-weight: bold;
+  height: 50px;
+}
+@media (max-width: 640px) {
+  .MyOrder {
+    width: 100%;
+  }
+}
