@@ -1,30 +1,18 @@
 import addedToCartImage from '@icons/bt_added_to_cart.svg'
 import addToCartImage from '@icons/bt_add_to_cart.svg'
-import React, { useContext, useState } from 'react'
+import React, { useContext } from 'react'
 import Image from 'next/image'
 import AppContext from '@context/AppContext'
 
 import styles from '@styles/ProductInfo.module.scss'
+import { useGetInfoProduct } from '@hooks/useGetInfoProduct'
 
 const ProductInfo = () => {
-  const { state, addToCart, removeFromCart } = useContext(AppContext)
+  const { state } = useContext(AppContext)
 
   const product = state.productInfo
-  const { price, title, description, images } = product
-
-  const handleClick = (item) => {
-    state.cart.find((c) => c === item) ? removeFromCart(item) : addToCart(item)
-  }
-
-  const [error, setError] = useState(false)
-
-  let imageSrc = images[0]
-  const validateUrl = /^(\/|http:\/\/|https:\/\/)/
-  if (!imageSrc || !validateUrl.test(imageSrc))
-    imageSrc =
-      'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Image_not_available.png/640px-Image_not_available.png'
-
-  const handleError = () => setError(true)
+  const { error, price, title, description, handleClick, imageSrc, handleError } =
+    useGetInfoProduct(product)
 
   return (
     <>

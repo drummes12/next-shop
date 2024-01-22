@@ -8,21 +8,6 @@ const withPWA = require('next-pwa')({
 module.exports = withPWA({
   reactStrictMode: true,
   images: {
-    domains: [
-      'api.lorem.space',
-      'cdn.shopify.com',
-      'placeimg.com',
-      'elcomercio.pe',
-      'user-images.githubusercontent.com',
-      'upload.wikimedia.org',
-      'github.com',
-      'cdn.lorem.space',
-      'www.google.com',
-      'api.escuelajs.co',
-      'upcdn.io',
-      'placeimh.com',
-      'i.picsum.photos',
-      'static.platzi.com',
-    ],
+    domains: ['source.unsplash.com'],
   },
 })
